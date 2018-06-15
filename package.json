@@ -4,7 +4,8 @@
   "author": "Toshihiro Kanai (mirucon)",
   "license": "GPL-2.0+",
   "scripts": {
-    "pot": "node bin/wppot.js"
+    "pot": "node bin/wppot.js",
+    "build": "mkdir dist && cp -r inc dist && cp -r languages dist && cp -r readme.txt dist && cp -r coldbox-ads-addon.php dist"
   },
   "devDependencies": {
     "wp-pot": "^1.6.1"

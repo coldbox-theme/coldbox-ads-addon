@@ -22,4 +22,4 @@ cd dist
 git init
 git add .
 git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" dist 2> /dev/null
+git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" dist
