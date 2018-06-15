@@ -1,0 +1,12 @@
+{
+  "name": "coldbox-ads-addon",
+  "version": "0.1.0",
+  "author": "Toshihiro Kanai (mirucon)",
+  "license": "GPL-2.0+",
+  "scripts": {
+    "pot": "node bin/wppot.js"
+  },
+  "devDependencies": {
+    "wp-pot": "^1.6.1"
+  }
+}
