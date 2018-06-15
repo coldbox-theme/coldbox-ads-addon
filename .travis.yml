@@ -9,42 +9,42 @@ notifications:
 
 env:
   global:
-    - GIT_COMMITTER_NAME=travis-ci
-    - GIT_COMMITTER_EMAIL=i@miruc.co
-    - GIT_AUTHOR_NAME=travis-ci
-    - GIT_AUTHOR_EMAIL=i@miruc.co
-    secure: Njnb7vt78lxpB+HV5Bjdq4eH46N8xY0wdBgz0P8N0X342FL+P8v5AezRRk8mwCT5hoA0+idMphelt9mD7nu/XvFZBvuVGfeB6krPolCoohzfnURAM7JLrBsJvPaJtcpJaL7F0krUjqQfafYjCdJoZz8pfDVhE2jxEv8/s5bFstF6QD1UeKb4p5sOIhz2aQnr2n/+nrIuTiSB3A8yf72oYwD0boePyrNCn9gJti2rlpgrE6irQh6TLaLYYcMH6BC5pFbpRb9xMrkKvdgAod+niLL3MF75kPj/qFZL/ZZh3v+ZN5XKwtFThugJIevmFAmW1DmoagpjpmRb3ShTCzI1EocV9nfYfPOEIojww01bhC9PRexNrdvOL5h60U6oa5r4mrtGglZ1ojyELh4nMBj3GpdQn6SUdmxNregKWVwSh7flOXDx1/QwGiDMUQcpZT5iXt4jgdRsw+tYrIk4HEN3P6vCO+Ku0/5F9aF8QUeDYqsaf/Gjh89aSOh/D4ncZrnO0CsOCUrwbcPOTY5tWbwKayyrABSvPdtwUlG2zrTQT6XtjYnfrfSf6RTARbcuEZwckvu/Z9Z2fokpLYfBxq94QAVW4v/XNM+UcsNHOX1VFindp6Ws+3avZsoQMZESWC8/WGQ6FxVFKJ/W2ph8m5RHsvgRhkW9hjM9Ikt0a9Wb6ik=
+  - GIT_COMMITTER_NAME=mirucon
+  - GIT_COMMITTER_EMAIL=i@miruc.co
+  - GIT_AUTHOR_NAME=mirucon
+  - GIT_AUTHOR_EMAIL=i@miruc.co
+  secure: Njnb7vt78lxpB+HV5Bjdq4eH46N8xY0wdBgz0P8N0X342FL+P8v5AezRRk8mwCT5hoA0+idMphelt9mD7nu/XvFZBvuVGfeB6krPolCoohzfnURAM7JLrBsJvPaJtcpJaL7F0krUjqQfafYjCdJoZz8pfDVhE2jxEv8/s5bFstF6QD1UeKb4p5sOIhz2aQnr2n/+nrIuTiSB3A8yf72oYwD0boePyrNCn9gJti2rlpgrE6irQh6TLaLYYcMH6BC5pFbpRb9xMrkKvdgAod+niLL3MF75kPj/qFZL/ZZh3v+ZN5XKwtFThugJIevmFAmW1DmoagpjpmRb3ShTCzI1EocV9nfYfPOEIojww01bhC9PRexNrdvOL5h60U6oa5r4mrtGglZ1ojyELh4nMBj3GpdQn6SUdmxNregKWVwSh7flOXDx1/QwGiDMUQcpZT5iXt4jgdRsw+tYrIk4HEN3P6vCO+Ku0/5F9aF8QUeDYqsaf/Gjh89aSOh/D4ncZrnO0CsOCUrwbcPOTY5tWbwKayyrABSvPdtwUlG2zrTQT6XtjYnfrfSf6RTARbcuEZwckvu/Z9Z2fokpLYfBxq94QAVW4v/XNM+UcsNHOX1VFindp6Ws+3avZsoQMZESWC8/WGQ6FxVFKJ/W2ph8m5RHsvgRhkW9hjM9Ikt0a9Wb6ik=
 
 branches:
   only:
-    - master
+  - master
 
 cache:
   directories:
-    - vendor
-    - "$HOME/.composer/cache"
+  - vendor
+  - "$HOME/.composer/cache"
 
 matrix:
   include:
-    - php: 7.2
-      env: WP_VERSION=trunk
-    - php: 7.2
-      env: WP_VERSION=latest
-    - php: 7.1
-      env: WP_VERSION=latest
-    - php: 7.0
-      env: WP_VERSION=latest
-    - php: 5.6
-      env: WP_VERSION=4.4
-    - php: 5.6
-      env: WP_VERSION=latest
-    - php: 5.6
-      env: WP_VERSION=trunk
-    - php: 5.6
-      env: WP_TRAVISCI=phpcs
-    - php: 5.3
-      env: WP_VERSION=latest
-      dist: precise
+  - php: 7.2
+    env: WP_VERSION=trunk
+  - php: 7.2
+    env: WP_VERSION=latest
+  - php: 7.1
+    env: WP_VERSION=latest
+  - php: 7.0
+    env: WP_VERSION=latest
+  - php: 5.6
+    env: WP_VERSION=4.4
+  - php: 5.6
+    env: WP_VERSION=latest
+  - php: 5.6
+    env: WP_VERSION=trunk
+  - php: 5.6
+    env: WP_TRAVISCI=phpcs
+  - php: 5.3
+    env: WP_VERSION=latest
+    dist: precise
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
