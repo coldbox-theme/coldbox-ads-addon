@@ -231,8 +231,8 @@ add_action(
 					'content'     => '<h4 class="czr-heading ads-heading">' . __( 'Ads Slot Settings', 'coldbox' ) . '</h4>',
 					'description' => esc_html__(
 						'These are settings of AdSense ads. In order to use these ads, you should create a corresponding type of ad for the slot
-					(e.g. if it\'s matched content ad slot, you should have a matched content. While it is possible to use different type of ad from the recommended one, I don\'t guarantee that will work and it might make your ads performance lower.).
-					Then, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain place, then just keep it blank.', 'coldbox-ads-addon'
+					(e.g. if it\'s matched content ad slot, you should have a matched content).
+					Then, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain place, then just keep it blank.  While it is possible to use different type of ad from the recommended one, I don\'t guarantee that will work and it might make your ads performance lower.', 'coldbox-ads-addon'
 					),
 					'section'     => 'ads_addon',
 					'priority'    => 50,
