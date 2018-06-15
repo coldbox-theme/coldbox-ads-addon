@@ -16,7 +16,7 @@ mkdir dist
 cp -r inc/*.php dist
 cp -r languages dist
 cp -r readme.txt dist
-cp -r coldbox-addon.php dist
+cp -r coldbox-ads-addon.php dist
 cd dist
 
 git init
