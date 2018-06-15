@@ -18,7 +18,7 @@
  * @since 0.1.0
  */
 function coldbox_ads_languages() {
-	load_plugin_textdomain( 'coldbox-ads-addon' );
+	load_plugin_textdomain( 'coldbox-ads-addon', false, 'languages/' );
 }
 add_action( 'plugins_loaded', 'coldbox_ads_languages' );
 
