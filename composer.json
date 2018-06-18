@@ -10,5 +10,10 @@
   },
   "require": {
     "inc2734/wp-github-plugin-updater": "^0.1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "updater\\": ""
+    }
   }
 }
