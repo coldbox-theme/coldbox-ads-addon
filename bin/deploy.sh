@@ -23,4 +23,4 @@ git init
 git checkout -b dist --force
 git add .
 git commit -m "Update from travis $TRAVIS_COMMIT"
-git push --quiet -f "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" dist 2> /dev/null
+git push --quiet -f "https://${GH_TOKEN}@github.com/coldbox-theme/coldbox-ads-addon.git" dist 2> /dev/null
