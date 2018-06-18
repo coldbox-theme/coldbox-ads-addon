@@ -26,6 +26,9 @@ function _manually_load_plugin() {
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 
+/**
+ * Manually load the environment being tested.
+ */
 function _manually_load_environment() {
 
 	// Switch to the Coldbox theme.

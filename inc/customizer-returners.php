@@ -13,9 +13,16 @@
  */
 function coldbox_ads_is_ads_enabled() {
 	$switcher = get_theme_mod( 'ads_global_switcher', true );
+	// Return false when no pub_id set.
 	if ( ! get_theme_mod( 'ads_pub_id', '' ) ) {
 		$switcher = false;
 	}
+	// Check if the ad has been disabled by meta box settings.
+	$meta = get_post_meta( get_the_ID(), 'coldbox_ads_metabox', true );
+	if ( in_array( 'disable_all_ads', $meta, true ) ) {
+		$switcher = false;
+	}
+
 	return $switcher;
 }
 
@@ -61,7 +68,15 @@ function coldbox_ads_label() {
  * @return boolean
  */
 function coldbox_ads_is_auto_ads_enabled() {
-	return get_theme_mod( 'ads_auto_ads', false );
+	$switcher = get_theme_mod( 'ads_auto_ads', false );
+
+	// Check if the ad has been disabled by meta box settings.
+	$meta = get_post_meta( get_the_ID(), 'coldbox_ads_metabox', true );
+	if ( in_array( 'disable_auto_ads', $meta, true ) ) {
+		$switcher = false;
+	}
+
+	return $switcher;
 }
 /**
  * Return whether or not it uses auto-ads on front page.

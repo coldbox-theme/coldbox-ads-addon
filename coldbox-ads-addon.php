@@ -28,3 +28,5 @@ require_once 'inc/ads-content.php';
 require_once 'inc/customizer.php';
 
 require_once 'inc/customizer-returners.php';
+
+require_once 'inc/metabox.php';

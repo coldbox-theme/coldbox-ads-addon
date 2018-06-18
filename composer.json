@@ -7,5 +7,8 @@
   },
   "scripts": {
     "lint": "phpcbf coldbox-ads-addon.php inc/*.php"
+  },
+  "require": {
+    "inc2734/wp-github-plugin-updater": "^0.1.2"
   }
 }

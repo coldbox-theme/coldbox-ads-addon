@@ -25,7 +25,8 @@ if ( coldbox_ads_is_amp() ) {
 			echo '<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>';
 			}
 		);
-	} elseif (
+	}
+	if (
 		coldbox_ads_is_ads_enabled() &&
 		coldbox_ads_is_auto_ads_enabled()
 	) {
