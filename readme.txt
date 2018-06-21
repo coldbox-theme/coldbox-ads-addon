@@ -15,7 +15,7 @@ The unified and powered AdSense integration extension just for the Coldbox theme
 
 == Installation ==
 
-1. Upload `coldbox-ads-addon` folder to the `/wp-content/plugins/` directory
+1. Upload `coldbox-ads-extension` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Set your publisher ID and Slot IDs from the Theme Customizer
 

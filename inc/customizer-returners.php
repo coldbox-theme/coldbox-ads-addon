@@ -3,7 +3,7 @@
  * Customizer settings returners for the Coldbox Ads Addon Extension
  *
  * @since 0.1.0
- * @package Coldbox_Ads_Addon
+ * @package Coldbox_Ads_Extension
  */
 
 /**

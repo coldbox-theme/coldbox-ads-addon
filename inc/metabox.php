@@ -3,7 +3,7 @@
  * Adding meta box to post/page edit for the Coldbox Ads Extension.
  *
  * @since 0.1.0
- * @package Coldbox_Ads_Addon
+ * @package Coldbox_Ads_Extension
  */
 
 /**
@@ -13,7 +13,7 @@
  */
 add_action(
 	'add_meta_boxes', function() {
-		add_meta_box( 'coldbox_ads_metabox', __( 'Coldbox Ads Extension: Ads Settings for This Post', 'coldbox-ads-addon' ), 'coldbox_ads_meta_box_callback', array( 'post', 'page' ) );
+		add_meta_box( 'coldbox_ads_metabox', __( 'Coldbox Ads Extension: Ads Settings for This Post', 'coldbox-ads-extension' ), 'coldbox_ads_meta_box_callback', array( 'post', 'page' ) );
 	}
 );
 
@@ -31,11 +31,11 @@ function coldbox_ads_meta_box_callback() {
 
 	$items = array(
 		array(
-			'text'  => esc_html__( 'Do not show ads for this post', 'coldbox-ads-addon' ),
+			'text'  => esc_html__( 'Do not show ads for this post', 'coldbox-ads-extension' ),
 			'value' => 'disable_all_ads',
 		),
 		array(
-			'text'  => esc_html__( 'Do not use auto-ads for this post', 'coldbox-ads-addon' ),
+			'text'  => esc_html__( 'Do not use auto-ads for this post', 'coldbox-ads-extension' ),
 			'value' => 'disable_auto_ads',
 		),
 	);

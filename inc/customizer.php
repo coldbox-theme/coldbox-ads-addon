@@ -3,7 +3,7 @@
  * Customizer settings for the Coldbox Ads Addon Extension
  *
  * @since 0.1.0
- * @package Coldbox_Ads_Addon
+ * @package Coldbox_Ads_Extension
  */
 
 /**
@@ -33,24 +33,24 @@ add_action(
 				$br = '';
 			}
 			if ( 'responsive' === $unit ) {
-				$unit = esc_html__( 'Responsive', 'coldbox-ads-addon' );
+				$unit = esc_html__( 'Responsive', 'coldbox-ads-extension' );
 			} elseif ( 'in-feed' === $unit ) {
-				$unit = esc_html__( 'In-feed', 'coldbox-ads-addon' );
+				$unit = esc_html__( 'In-feed', 'coldbox-ads-extension' );
 			} elseif ( 'matched_content' === $unit ) {
-				$unit = esc_html__( 'Matched Content', 'coldbox-ads-addon' );
+				$unit = esc_html__( 'Matched Content', 'coldbox-ads-extension' );
 			} elseif ( 'in-article' === $unit ) {
-				$unit = esc_html__( 'In-article', 'coldbox-ads-addon' );
+				$unit = esc_html__( 'In-article', 'coldbox-ads-extension' );
 			} elseif ( 'large_rectangle' === $unit ) {
-				$unit = esc_html__( 'Large Rectangle', 'coldbox-ads-addon' );
+				$unit = esc_html__( 'Large Rectangle', 'coldbox-ads-extension' );
 			}
 			/* translators: 1: Unit name. */
-			return $br . sprintf( esc_html__( 'RECOMMENDED UNIT: %s.', 'coldbox-ads-addon' ), '<strong>' . $unit . '</strong>' );
+			return $br . sprintf( esc_html__( 'RECOMMENDED UNIT: %s.', 'coldbox-ads-extension' ), '<strong>' . $unit . '</strong>' );
 		}
 
 		// Register 'ads_addon' section.
 		$wp_customize->add_section(
 			'ads_addon', array(
-				'title'    => __( 'ADS EXTENSION: Google AdSense', 'coldbox-ads-addon' ),
+				'title'    => __( 'ADS EXTENSION: Google AdSense', 'coldbox-ads-extension' ),
 				'priority' => 12,
 			)
 		);
@@ -65,7 +65,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_global_switcher', array(
-					'label'    => __( 'Use Google AdSense', 'coldbox-ads-addon' ),
+					'label'    => __( 'Use Google AdSense', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'checkbox',
 					'priority' => 1,
@@ -84,10 +84,10 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_pub_id', array(
-					'label'       => __( 'AdSense Publisher ID', 'coldbox-ads-addon' ),
+					'label'       => __( 'AdSense Publisher ID', 'coldbox-ads-extension' ),
 					'description' => sprintf(
 						/* translators: 1: opening a tag, 2: closing a tag. */
-						esc_html__( 'Publisher ID is the identifier of your AdSense account and its format is something like this: "ca-pub-XXXXXXXXXXXXX". %1$sGo here%2$s to learn how to find your publisher ID.', 'coldbox-ads-addon' ),
+						esc_html__( 'Publisher ID is the identifier of your AdSense account and its format is something like this: "ca-pub-XXXXXXXXXXXXX". %1$sGo here%2$s to learn how to find your publisher ID.', 'coldbox-ads-extension' ),
 						'<a href="' . esc_url( __( 'https://support.google.com/adsense/answer/105516', 'coldbox_ads_addon' ) ) . '">',
 						'</a>'
 					),
@@ -108,8 +108,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_label', array(
-					'label'       => __( 'Ad Label', 'coldbox-ads-addon' ),
-					'description' => esc_html__( 'This label will be shown before every single ad, except auto-ads, in-feed ads and matched content ads.', 'coldbox-ads-addon' ),
+					'label'       => __( 'Ad Label', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'This label will be shown before every single ad, except auto-ads, in-feed ads and matched content ads.', 'coldbox-ads-extension' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
 					'priority'    => 7,
@@ -127,8 +127,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_ads', array(
-					'label'       => esc_html__( 'Enable Auto Ads', 'coldbox-ads-addon' ),
-					'description' => esc_html__( 'Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard.', 'coldbox-ads-addon' ),
+					'label'       => esc_html__( 'Enable Auto Ads', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard.', 'coldbox-ads-extension' ),
 					'section'     => 'ads_addon',
 					'type'        => 'checkbox',
 					'priority'    => 10,
@@ -160,7 +160,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_on_front_page', array(
-					'label'    => __( 'Front Page', 'coldbox-ads-addon' ),
+					'label'    => __( 'Front Page', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'checkbox',
 					'priority' => 20,
@@ -177,7 +177,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_on_archive', array(
-					'label'    => __( 'Archive Pages', 'coldbox-ads-addon' ),
+					'label'    => __( 'Archive Pages', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'checkbox',
 					'priority' => 25,
@@ -194,7 +194,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_on_single', array(
-					'label'    => __( 'Single Pages', 'coldbox-ads-addon' ),
+					'label'    => __( 'Single Pages', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'checkbox',
 					'priority' => 30,
@@ -211,7 +211,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_on_pages', array(
-					'label'    => __( 'Pages', 'coldbox-ads-addon' ),
+					'label'    => __( 'Pages', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'checkbox',
 					'priority' => 35,
@@ -232,7 +232,7 @@ add_action(
 					'description' => esc_html__(
 						'These are settings of AdSense ads. In order to use these ads, you should create a corresponding type of ad for the slot
 					(e.g. if it\'s matched content ad slot, you should have a matched content).
-					Then, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain place, then just keep it blank.  While it is possible to use different type of ad from the recommended one, I don\'t guarantee that will work and it might make your ads performance lower.', 'coldbox-ads-addon'
+					Then, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain place, then just keep it blank.  While it is possible to use different type of ad from the recommended one, I don\'t guarantee that will work and it might make your ads performance lower.', 'coldbox-ads-extension'
 					),
 					'section'     => 'ads_addon',
 					'priority'    => 50,
@@ -251,8 +251,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_single_mid1', array(
-					'label'       => __( 'Single In-article Ad Slot 1', 'coldbox-ads-addon' ),
-					'description' => esc_html__( 'This ad will be shown just before the second h2 heading in an article.', 'coldbox-ads-addon' ) .
+					'label'       => __( 'Single In-article Ad Slot 1', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'This ad will be shown just before the second h2 heading in an article.', 'coldbox-ads-extension' ) .
 									coldbox_ads_recommended_unit_label( 1, 'in-article' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -271,8 +271,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_single_mid2', array(
-					'label'       => __( 'Single In-article Ad Slot 2', 'coldbox-ads-addon' ),
-					'description' => esc_html__( 'This ad will be shown just before the last h2 heading in an article.', 'coldbox-ads-addon' ) .
+					'label'       => __( 'Single In-article Ad Slot 2', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'This ad will be shown just before the last h2 heading in an article.', 'coldbox-ads-extension' ) .
 									coldbox_ads_recommended_unit_label( 1, 'in-article' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -292,8 +292,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_single_bottom_desktop', array(
-					'label'       => __( 'Single Bottom Ad Slot for Desktop', 'coldbox-ads-addon' ),
-					'description' => esc_html__( 'This ad will be shown just after the content of an article.', 'coldbox-ads-addon' ) .
+					'label'       => __( 'Single Bottom Ad Slot for Desktop', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'This ad will be shown just after the content of an article.', 'coldbox-ads-extension' ) .
 									coldbox_ads_recommended_unit_label( 1, 'large_rectangle' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -312,7 +312,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_single_bottom_mobile', array(
-					'label'       => __( 'Single Bottom Ad Slot for Mobile', 'coldbox-ads-addon' ),
+					'label'       => __( 'Single Bottom Ad Slot for Mobile', 'coldbox-ads-extension' ),
 					'description' => coldbox_ads_recommended_unit_label( 0, 'responsive' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -332,9 +332,9 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_matched_content', array(
-					'label'       => __( 'Matched Content Ad Slot', 'coldbox-ads-addon' ),
+					'label'       => __( 'Matched Content Ad Slot', 'coldbox-ads-extension' ),
 					'description' => __(
-						'This will be shown just after your related posts.', 'coldbox-ads-addon'
+						'This will be shown just after your related posts.', 'coldbox-ads-extension'
 					) . coldbox_ads_recommended_unit_label( 1, 'matched_content' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -354,8 +354,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_in_feed', array(
-					'label'       => __( 'In-feed Ad Slot', 'coldbox-ads-addon' ),
-					'description' => __( 'In-feed ads are native-like ads which will be shown between articles on front and archive pages. To use this ad, create an in-feed ad from your AdSense dashboard and copy/paste slot ID and layout key.', 'coldbox-ads-addon' ) .
+					'label'       => __( 'In-feed Ad Slot', 'coldbox-ads-extension' ),
+					'description' => __( 'In-feed ads are native-like ads which will be shown between articles on front and archive pages. To use this ad, create an in-feed ad from your AdSense dashboard and copy/paste slot ID and layout key.', 'coldbox-ads-extension' ) .
 									coldbox_ads_recommended_unit_label( 1, 'in-feed' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -373,8 +373,8 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_in_feed_layout', array(
-					'label'       => __( 'In-feed Ad Layout', 'coldbox-ads-addon' ),
-					'description' => __( 'If you want to customize the layout of ad layout, paste its ad-layout-key here.', 'coldbox-ads-addon' ),
+					'label'       => __( 'In-feed Ad Layout', 'coldbox-ads-extension' ),
+					'description' => __( 'If you want to customize the layout of ad layout, paste its ad-layout-key here.', 'coldbox-ads-extension' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
 					'priority'    => 113,
@@ -391,7 +391,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_in_feed_num', array(
-					'label'    => __( 'Show in-feed ads per X articles', 'coldbox-ads-addon' ),
+					'label'    => __( 'Show in-feed ads per X articles', 'coldbox-ads-extension' ),
 					'section'  => 'ads_addon',
 					'type'     => 'number',
 					'priority' => 116,
@@ -410,7 +410,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_archive_top', array(
-					'label'       => __( 'Archive Top Ad Slot', 'coldbox-ads-addon' ),
+					'label'       => __( 'Archive Top Ad Slot', 'coldbox-ads-extension' ),
 					'description' => coldbox_ads_recommended_unit_label( 0, 'responsive' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -430,7 +430,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_archive_bottom_desktop', array(
-					'label'       => __( 'Archive Bottom Ad Slot for Desktop', 'coldbox-ads-addon' ),
+					'label'       => __( 'Archive Bottom Ad Slot for Desktop', 'coldbox-ads-extension' ),
 					'description' => coldbox_ads_recommended_unit_label( 0, 'large_rectangle' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',
@@ -450,7 +450,7 @@ add_action(
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize, 'ad_archive_bottom_mobile', array(
-					'label'       => __( 'Archive Bottom Ad Slot for Mobile', 'coldbox-ads-addon' ),
+					'label'       => __( 'Archive Bottom Ad Slot for Mobile', 'coldbox-ads-extension' ),
 					'description' => coldbox_ads_recommended_unit_label( 0, 'responsive' ),
 					'section'     => 'ads_addon',
 					'type'        => 'text',

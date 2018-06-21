@@ -3,6 +3,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Coldbox Ads Addon Extension\n"
+"POT-Creation-Date: 2018-06-22 07:28+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Toshihiro Kanai (mirucon) <i@miruc.co>\n"
+"Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,54 +17,69 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.0.8\n"
-"Last-Translator: Toshihiro Kanai (mirucon) <i@miruc.co>\n"
-"Language: ja\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: ../inc/customizer.php:36
+#: inc/customizer-validators.php:20
+msgid "You need to provide a valid publisher ID before using ads functions."
+msgstr "広告機能を使う前に、有効なサイト運営者 ID を登録する必要があります。"
+
+#: inc/customizer-validators.php:22
+msgid "It's not a valid publisher ID, it should start with \"ca-pub-\"."
+msgstr "有効な運営者 ID ではありません、”ca-pub” から始まる必要があります。"
+
+#: inc/customizer-validators.php:24
+msgid "ID is too short."
+msgstr "サイト運営者 ID が短すぎます。"
+
+#: inc/customizer-validators.php:26
+msgid "It should only contain numbers after \"ca-pub-\"."
+msgstr "“ca-pub-“ のあとは数値のみ使用可能です。"
+
+#: inc/customizer-validators.php:41
+msgid "It should only contain numbers."
+msgstr "数値のみ使用可能です。"
+
+#: inc/customizer.php:36
 msgid "Responsive"
 msgstr "レスポンシブ"
 
-#: ../inc/customizer.php:38
+#: inc/customizer.php:38
 msgid "In-feed"
 msgstr "インフィード"
 
-#: ../inc/customizer.php:40
+#: inc/customizer.php:40
 msgid "Matched Content"
 msgstr "関連コンテンツ"
 
-#: ../inc/customizer.php:42
+#: inc/customizer.php:42
 msgid "In-article"
 msgstr "記事内"
 
-#: ../inc/customizer.php:44
+#: inc/customizer.php:44
 msgid "Large Rectangle"
 msgstr "レクタングル (大)"
 
-#. translators: 1: Unit name.
-#: ../inc/customizer.php:47
+#: inc/customizer.php:47
+#, php-format
 msgid "RECOMMENDED UNIT: %s."
 msgstr "推奨ユニット: %s"
 
-#: ../inc/customizer.php:53
+#: inc/customizer.php:53
 msgid "ADS EXTENSION: Google AdSense"
 msgstr "ADS EXTENSION: Google AdSense"
 
-#: ../inc/customizer.php:68
+#: inc/customizer.php:68
 msgid "Use Google AdSense"
 msgstr "Google AdSense 機能を有効化"
 
-#: ../inc/customizer.php:87
+#: inc/customizer.php:87
 msgid "AdSense Publisher ID"
 msgstr "AdSense サイト運営者 ID"
 
-#. translators: 1: opening a tag, 2: closing a tag.
-#: ../inc/customizer.php:90
+#: inc/customizer.php:90
+#, php-format
 msgid ""
 "Publisher ID is the identifier of your AdSense account and its format is "
 "something like this: \"ca-pub-XXXXXXXXXXXXX\". %1$sGo here%2$s to learn how "
@@ -69,11 +89,15 @@ msgstr ""
 "ようなフォーマットのものです。%1$sID の探し方はこちらの記事%2$sをお読みくだ"
 "さい。"
 
-#: ../inc/customizer.php:111
+#: inc/customizer.php:91
+msgid "https://support.google.com/adsense/answer/105516"
+msgstr "https://support.google.com/adsense/answer/105516?hl=ja"
+
+#: inc/customizer.php:111
 msgid "Ad Label"
 msgstr "広告ラベル"
 
-#: ../inc/customizer.php:112
+#: inc/customizer.php:112
 msgid ""
 "This label will be shown before every single ad, except auto-ads, in-feed "
 "ads and matched content ads."
@@ -81,11 +105,11 @@ msgstr ""
 "広告ラベルは、自動広告、インフィード広告、関連コンテンツ広告を除くすべての広"
 "告の前に表示されるようになります。"
 
-#: ../inc/customizer.php:130
+#: inc/customizer.php:130
 msgid "Enable Auto Ads"
 msgstr "自動広告を有効化"
 
-#: ../inc/customizer.php:131
+#: inc/customizer.php:131
 msgid ""
 "Before using this, you need to enable and configure your auto-ads setting "
 "from your AdSense dashboard."
@@ -93,23 +117,31 @@ msgstr ""
 "この機能を使う前には AdSense のダッシュボードから自動広告設定を有効化してお"
 "く必要があります。"
 
-#: ../inc/customizer.php:163
+#: inc/customizer.php:147
+msgid "Use auto ads on..."
+msgstr "ページ種類ごとの自動広告 有効/無効選択"
+
+#: inc/customizer.php:163
 msgid "Front Page"
 msgstr "トップページ"
 
-#: ../inc/customizer.php:180
+#: inc/customizer.php:180
 msgid "Archive Pages"
 msgstr "アーカイブページ"
 
-#: ../inc/customizer.php:197
+#: inc/customizer.php:197
 msgid "Single Pages"
 msgstr "投稿ページ"
 
-#: ../inc/customizer.php:214
+#: inc/customizer.php:214
 msgid "Pages"
 msgstr "固定ページ"
 
-#: ../inc/customizer.php:232
+#: inc/customizer.php:231
+msgid "Ads Slot Settings"
+msgstr "広告スロット設定"
+
+#: inc/customizer.php:233
 msgid ""
 "These are settings of AdSense ads. In order to use these ads, you should "
 "create a corresponding type of ad for the slot\n"
@@ -126,47 +158,47 @@ msgstr ""
 "空欄にしておいてください。推奨となっているユニットと違うタイプの広告を使用す"
 "ることも可能ですが、想定通り動かなくなる可能性があります。"
 
-#: ../inc/customizer.php:254
+#: inc/customizer.php:254
 msgid "Single In-article Ad Slot 1"
 msgstr "投稿ページ記事内広告 1"
 
-#: ../inc/customizer.php:255
+#: inc/customizer.php:255
 msgid "This ad will be shown just before the second h2 heading in an article."
 msgstr "この広告は記事内の2つ目の h2 タグの前に表示されます。"
 
-#: ../inc/customizer.php:274
+#: inc/customizer.php:274
 msgid "Single In-article Ad Slot 2"
 msgstr "投稿ページ記事内広告 2"
 
-#: ../inc/customizer.php:275
+#: inc/customizer.php:275
 msgid "This ad will be shown just before the last h2 heading in an article."
 msgstr "この広告は記事内の最後の h2 タグの前に表示されます。"
 
-#: ../inc/customizer.php:295
+#: inc/customizer.php:295
 msgid "Single Bottom Ad Slot for Desktop"
 msgstr "投稿ページ下部 [デスクトップ]"
 
-#: ../inc/customizer.php:296
+#: inc/customizer.php:296
 msgid "This ad will be shown just after the content of an article."
 msgstr "この広告は投稿ページのコンテンツのあとに表示されます。"
 
-#: ../inc/customizer.php:315
+#: inc/customizer.php:315
 msgid "Single Bottom Ad Slot for Mobile"
 msgstr "投稿ページ下部 [モバイル]"
 
-#: ../inc/customizer.php:335
+#: inc/customizer.php:335
 msgid "Matched Content Ad Slot"
 msgstr "関連コンテンツ"
 
-#: ../inc/customizer.php:336
+#: inc/customizer.php:337
 msgid "This will be shown just after your related posts."
-msgstr "この広告は関連広告の下に表示されます。"
+msgstr "この広告は関連記事の下に表示されます。"
 
-#: ../inc/customizer.php:357
+#: inc/customizer.php:357
 msgid "In-feed Ad Slot"
 msgstr "インフィード広告"
 
-#: ../inc/customizer.php:358
+#: inc/customizer.php:358
 msgid ""
 "In-feed ads are native-like ads which will be shown between articles on "
 "front and archive pages. To use this ad, create an in-feed ad from your "
@@ -177,28 +209,40 @@ msgstr ""
 "フィード広告を作成し、スロット ID と layout key をここにペーストしてくださ"
 "い。"
 
-#: ../inc/customizer.php:376
+#: inc/customizer.php:376
 msgid "In-feed Ad Layout"
 msgstr "インフィード広告レイアウト"
 
-#: ../inc/customizer.php:377
+#: inc/customizer.php:377
 msgid ""
 "If you want to customize the layout of ad layout, paste its ad-layout-key "
 "here."
 msgstr "インフィード広告のレイアウトキーをここにペーストしてください。"
 
-#: ../inc/customizer.php:394
+#: inc/customizer.php:394
 msgid "Show in-feed ads per X articles"
 msgstr "インフィード広告を何記事毎に表示するかの設定"
 
-#: ../inc/customizer.php:413
+#: inc/customizer.php:413
 msgid "Archive Top Ad Slot"
 msgstr "アーカイブページ上部"
 
-#: ../inc/customizer.php:433
+#: inc/customizer.php:433
 msgid "Archive Bottom Ad Slot for Desktop"
 msgstr "アーカイブページ下部 [デスクトップ]"
 
-#: ../inc/customizer.php:453
+#: inc/customizer.php:453
 msgid "Archive Bottom Ad Slot for Mobile"
 msgstr "アーカイブページ下部 [モバイル]"
+
+#: inc/metabox.php:16
+msgid "Coldbox Ads Extension: Ads Settings for This Post"
+msgstr "Coldbox Ads Extension: このページの広告設定"
+
+#: inc/metabox.php:34
+msgid "Do not show ads for this post"
+msgstr "このページで広告を使用しない"
+
+#: inc/metabox.php:38
+msgid "Do not use auto-ads for this post"
+msgstr "このページで自動広告を使用しない"

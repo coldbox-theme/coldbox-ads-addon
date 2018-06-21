@@ -2,7 +2,7 @@
 /**
  * Class SampleTest
  *
- * @package Coldbox_Ads_Addon
+ * @package Coldbox_Ads_Extension
  */
 
 /**

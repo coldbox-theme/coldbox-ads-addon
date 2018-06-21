@@ -6,7 +6,7 @@
     "wp-coding-standards/wpcs": "*"
   },
   "scripts": {
-    "lint": "phpcbf coldbox-ads-addon.php inc/*.php"
+    "lint": "phpcbf coldbox-ads-extension.php inc/*.php"
   },
   "require": {
     "php": ">=5.3.0",

@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package Coldbox_Ads_Addon
+ * @package Coldbox_Ads_Extension
  */
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
@@ -22,7 +22,7 @@ require_once $_tests_dir . '/includes/functions.php';
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	require dirname( dirname( __FILE__ ) ) . '/coldbox-ads-addon.php';
+	require dirname( dirname( __FILE__ ) ) . '/coldbox-ads-extension.php';
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 
@@ -36,7 +36,7 @@ function _manually_load_environment() {
 
 	// Update array with plugins to include.
 	$plugins_to_active = array(
-		'coldbox-ads-addon/coldbox-ads-addon.php',
+		'coldbox-ads-extension/coldbox-ads-extension.php',
 	);
 
 	update_option( 'active_plugins', $plugins_to_active );

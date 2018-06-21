@@ -162,3 +162,15 @@ msgstr ""
 #: ../inc/customizer.php:453
 msgid "Archive Bottom Ad Slot for Mobile"
 msgstr ""
+
+#: ../inc/metabox.php:16
+msgid "Coldbox Ads Extension: Ads Settings for This Post"
+msgstr ""
+
+#: ../inc/metabox.php:34
+msgid "Do not show ads for this post"
+msgstr ""
+
+#: ../inc/metabox.php:38
+msgid "Do not use auto-ads for this post"
+msgstr ""
