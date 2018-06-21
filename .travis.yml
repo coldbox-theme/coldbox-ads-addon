@@ -42,6 +42,7 @@ matrix:
 before_script:
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 - composer global require wp-coding-standards/wpcs
+- composer install
 - nvm install 8
 - npm install
 - |

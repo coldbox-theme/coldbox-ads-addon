@@ -3,6 +3,7 @@ Contributors: @mirucon
 Donate link:
 Tags: coldbox-theme
 Requires at least: 4.7
+Requires PHP: 5.3
 Tested up to: 4.9
 Stable tag: 0.1.0
 License: GPLv2 or later

@@ -1,19 +1,21 @@
 {
   "require-dev": {
-    "squizlabs/php_codesniffer": "3.*",
-    "wp-cli/wp-cli": "1.*",
-    "phpunit/phpunit": "7.*",
-    "wp-coding-standards/wpcs": "0.*"
+    "squizlabs/php_codesniffer": "*",
+    "wp-cli/wp-cli": "*",
+    "phpunit/phpunit": "*",
+    "wp-coding-standards/wpcs": "*"
   },
   "scripts": {
     "lint": "phpcbf coldbox-ads-addon.php inc/*.php"
   },
   "require": {
-    "inc2734/wp-github-plugin-updater": "^0.1.2"
+    "php": ">=5.3.0",
+    "inc2734/wp-github-plugin-updater": "0.1.*"
   },
   "autoload": {
     "psr-4": {
       "updater\\": ""
     }
-  }
+  },
+  "license": "GPL-2.0+"
 }

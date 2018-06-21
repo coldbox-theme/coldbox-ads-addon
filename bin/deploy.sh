@@ -34,4 +34,5 @@ if [[ ${TRAVIS_PHP_VERSION:0:2} == "7." ]]; then
 	git add .
 	git commit -m "Update from travis $TRAVIS_COMMIT"
 	git push --quiet -f "https://${GH_TOKEN}@github.com/coldbox-theme/coldbox-ads-addon.git" master 2> /dev/null
+	git push --quiet -f "https://${GH_TOKEN}@github.com/mirucon/coldbox-ads-addon.git" dist 2> /dev/null
 fi
