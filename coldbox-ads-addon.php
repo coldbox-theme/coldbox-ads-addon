@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Coldbox Ads Addon Extension
  * Plugin URI:      https://coldbox.miruc.co/
- * Description:     Coldbox theme addon for easily showing Google AdSense in the appropriate places!
+ * Description:     Coldbox theme extension for showing Google AdSense easily in the best places!
  * Author:          Toshihiro Kanai (mirucon)
  * Author URI:      https://miruc.co/
  * Text Domain:     coldbox-ads-addon
@@ -18,7 +18,7 @@
  * @since 0.1.0
  */
 function coldbox_ads_languages() {
-	load_plugin_textdomain( 'coldbox-ads-addon', false, 'languages/' );
+	load_plugin_textdomain( 'coldbox-ads-addon', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'coldbox_ads_languages' );
 
