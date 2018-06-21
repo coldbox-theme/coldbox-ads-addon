@@ -64,7 +64,7 @@ add_action(
 			return;
 		}
 		// Check if user has permissions to save data.
-		if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+		if ( isset( $_POST['post_type'] ) && 'page' === $_POST['post_type'] ) {
 			if ( ! current_user_can( 'edit_page', $post_id ) ) {
 				return;
 			}
