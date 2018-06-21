@@ -42,7 +42,10 @@ matrix:
 before_script:
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 - composer global require wp-coding-standards/wpcs
-- composer install
+- |
+    if [[ ${TRAVIS_PHP_VERSION} == "7.2" ]]; then
+      composer install
+    fi
 - nvm install 8
 - npm install
 - |
