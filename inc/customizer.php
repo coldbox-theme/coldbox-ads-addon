@@ -128,7 +128,7 @@ add_action(
 			new WP_Customize_Control(
 				$wp_customize, 'ads_auto_ads', array(
 					'label'       => esc_html__( 'Enable Auto Ads', 'coldbox-ads-extension' ),
-					'description' => esc_html__( 'Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard.', 'coldbox-ads-extension' ),
+					'description' => esc_html__( 'Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard. Don\'t forget to enable AMP auto-ads as well, if you want it on AMP pages.', 'coldbox-ads-extension' ),
 					'section'     => 'ads_addon',
 					'type'        => 'checkbox',
 					'priority'    => 10,
