@@ -2,7 +2,7 @@
 /**
  * Customizer settings for the Coldbox Ads Addon Extension
  *
- * @since 0.1.0
+ * @since 1.0.0
  * @package Coldbox_Ads_Extension
  */
 
@@ -44,7 +44,7 @@ add_action(
 /**
  * Matched content ad.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_related_posts_bottom', function() {
@@ -78,7 +78,7 @@ add_action(
 /**
  * In-feed ads.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_archive_midst_content', function( $count ) {
@@ -141,7 +141,7 @@ add_action(
 /**
  * Single - Middle of content ad 1.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_single_middle_of_content', function () {
@@ -184,7 +184,7 @@ add_action(
 /**
  * Single - Middle of content ad 2.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_single_last_of_content', function () {
@@ -226,7 +226,7 @@ add_action(
 /**
  * Single - Bottom ad.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_single_after', function () {
@@ -308,7 +308,7 @@ add_action(
 /**
  * Archive - Top ad.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_archive_top', function() {
@@ -357,7 +357,7 @@ add_action(
 /**
  * Archive - Bottom ad.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'cd_archive_bottom', function() {

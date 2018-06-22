@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:     Coldbox Ads Extension
- * Plugin URI:      https://coldbox.miruc.co/
- * Description:     Coldbox theme extension for easy and high revenue Google AdSense with the Coldbox theme!
+ * Plugin URI:      https://coldbox.miruc.co/addons/google-adsense-extension/
+ * Description:     Coldbox theme extension for easy and high revenue Google AdSense. It supports responsive, in-feed, in-article, matched content and auto ads!
  * Author:          Toshihiro Kanai (mirucon)
  * Author URI:      https://miruc.co/
  * Text Domain:     coldbox-ads-extension
@@ -15,7 +15,7 @@
 /**
  * Register the language pack.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 function coldbox_ads_languages() {
 	load_plugin_textdomain( 'coldbox-ads-extension', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );

@@ -11,7 +11,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Coldbox_Ads_Cust
 	/**
 	 * For adding HTML on the customizer.
 	 *
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 */
 	class Coldbox_Ads_Custom_Content extends WP_Customize_Control {
 

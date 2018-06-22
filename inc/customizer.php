@@ -2,14 +2,14 @@
 /**
  * Customizer settings for the Coldbox Ads Addon Extension
  *
- * @since 0.1.0
+ * @since Coldbox_Ads_Extension
  * @package Coldbox_Ads_Extension
  */
 
 /**
  * Adding sections for the ads addon settings.
  *
- * @since 0.1.0
+ * @since 1.0.0
  * @param WP_Customize_Manager $wp_customize Hook for the customizer contents.
  */
 add_action(
@@ -21,7 +21,7 @@ add_action(
 		/**
 		 * Returns recommended unit label for customizer description.
 		 *
-		 * @since 0.1.0
+		 * @since 1.0.0
 		 * @param boolean $br If it breaks line before or not.
 		 * @param string  $unit Unit name.
 		 * @return string

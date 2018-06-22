@@ -2,7 +2,7 @@
 /**
  * AdSense settings on AMP pages.
  *
- * @since 0.1.0
+ * @since 1.0.0
  * @package Coldbox_Ads_addon
  */
 

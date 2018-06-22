@@ -2,14 +2,14 @@
 /**
  * Adding meta box to post/page edit for the Coldbox Ads Extension.
  *
- * @since 0.1.0
+ * @since 1.0.0
  * @package Coldbox_Ads_Extension
  */
 
 /**
  * Register meta box.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 add_action(
 	'add_meta_boxes', function() {
@@ -20,7 +20,7 @@ add_action(
 /**
  * Render meta box on the post edit.
  *
- * @since 0.1.0
+ * @since 1.0.0
  **/
 function coldbox_ads_meta_box_callback() {
 	wp_nonce_field( 'coldbox_ads_metabox_checkbox', 'coldbox_ads_metabox_checkbox_nonce' );
