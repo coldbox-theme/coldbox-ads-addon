@@ -5,11 +5,11 @@ Tags: coldbox-theme
 Requires at least: 4.7
 Requires PHP: 5.3
 Tested up to: 4.9
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The unified and powered AdSense integration extension just for the Coldbox theme. It supports one-click auto-ads and suitable places for matched content, in-feed, native ads and more!
+Coldbox theme extension for easy and high revenue Google AdSense. It supports responsive, in-feed, in-article, matched content and auto ads!
 
 == Description ==
 
@@ -25,6 +25,6 @@ The unified and powered AdSense integration extension just for the Coldbox theme
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 
 * Initial release
