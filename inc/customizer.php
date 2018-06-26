@@ -144,7 +144,7 @@ add_action(
 		$wp_customize->add_control(
 			new Coldbox_Ads_Custom_Content(
 				$wp_customize, 'ads_auto_ads_heading', array(
-					'content'  => '<h4 class="czr-heading ads-heading">' . __( 'Use auto ads on...', 'coldbox' ) . '</h4>',
+					'content'  => '<h4 class="czr-heading ads-heading">' . __( 'Use auto ads on...', 'coldbox-ads-extension' ) . '</h4>',
 					'section'  => 'ads_addon',
 					'priority' => 15,
 				)
@@ -228,7 +228,7 @@ add_action(
 		$wp_customize->add_control(
 			new Coldbox_Ads_Custom_Content(
 				$wp_customize, 'ads_slot_tags_heading', array(
-					'content'     => '<h4 class="czr-heading ads-heading">' . __( 'Ads Slot Settings', 'coldbox' ) . '</h4>',
+					'content'     => '<h4 class="czr-heading ads-heading">' . __( 'Ads Slot Settings', 'coldbox-ads-extension' ) . '</h4>',
 					'description' => esc_html__(
 						'These are settings of AdSense ads. In order to use these ads, you should create a corresponding type of ad for the slot
 					(e.g. if it\'s matched content ad slot, you should have a matched content).

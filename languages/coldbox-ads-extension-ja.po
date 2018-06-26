@@ -12,9 +12,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
-"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
-"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.8\n"
@@ -81,13 +80,11 @@ msgstr "AdSense サイト運営者 ID"
 #: inc/customizer.php:90
 #, php-format
 msgid ""
-"Publisher ID is the identifier of your AdSense account and its format is "
-"something like this: \"ca-pub-XXXXXXXXXXXXX\". %1$sGo here%2$s to learn how "
-"to find your publisher ID."
+"Publisher ID is the identifier of your AdSense account and its format is something like this: \"ca-pub-"
+"XXXXXXXXXXXXX\". %1$sGo here%2$s to learn how to find your publisher ID."
 msgstr ""
-"サイト運営者 ID は AdSense アカウント固有の ID で、”ca-pub-XXXXXXXXXXXXX” の"
-"ようなフォーマットのものです。%1$sID の探し方はこちらの記事%2$sをお読みくだ"
-"さい。"
+"サイト運営者 ID は AdSense アカウント固有の ID で、”ca-pub-XXXXXXXXXXXXX” のようなフォーマットのもので"
+"す。%1$sID の探し方はこちらの記事%2$sをお読みください。"
 
 #: inc/customizer.php:91
 msgid "https://support.google.com/adsense/answer/105516"
@@ -98,24 +95,18 @@ msgid "Ad Label"
 msgstr "広告ラベル"
 
 #: inc/customizer.php:112
-msgid ""
-"This label will be shown before every single ad, except auto-ads, in-feed "
-"ads and matched content ads."
+msgid "This label will be shown before every single ad, except auto-ads, in-feed ads and matched content ads."
 msgstr ""
-"広告ラベルは、自動広告、インフィード広告、関連コンテンツ広告を除くすべての広"
-"告の前に表示されるようになります。"
+"広告ラベルは、自動広告、インフィード広告、関連コンテンツ広告を除くすべての広告の前に表示されるようになりま"
+"す。"
 
 #: inc/customizer.php:130
 msgid "Enable Auto Ads"
 msgstr "自動広告を有効化"
 
 #: inc/customizer.php:131
-msgid ""
-"Before using this, you need to enable and configure your auto-ads setting "
-"from your AdSense dashboard."
-msgstr ""
-"この機能を使う前には AdSense のダッシュボードから自動広告設定を有効化してお"
-"く必要があります。"
+msgid "Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard."
+msgstr "この機能を使う前には AdSense のダッシュボードから自動広告設定を有効化しておく必要があります。"
 
 #: inc/customizer.php:147
 msgid "Use auto ads on..."
@@ -143,20 +134,17 @@ msgstr "広告スロット設定"
 
 #: inc/customizer.php:233
 msgid ""
-"These are settings of AdSense ads. In order to use these ads, you should "
-"create a corresponding type of ad for the slot\n"
-"\t\t\t\t\t(e.g. if it's matched content ad slot, you should have a matched "
-"content).\n"
-"\t\t\t\t\tThen, copy and paste the slot ID to enable the ad slot. If you do "
-"not wish to show ad in certain place, then just keep it blank.  While it is "
-"possible to use different type of ad from the recommended one, I don't "
-"guarantee that will work and it might make your ads performance lower."
+"These are settings of AdSense ads. In order to use these ads, you should create a corresponding type of ad "
+"for the slot\n"
+"\t\t\t\t\t(e.g. if it's matched content ad slot, you should have a matched content).\n"
+"\t\t\t\t\tThen, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain "
+"place, then just keep it blank.  While it is possible to use different type of ad from the recommended one, "
+"I don't guarantee that will work and it might make your ads performance lower."
 msgstr ""
-"これらは AdSense の個々のユニット設定です。これらの広告を使うためには "
-"AdSense のダッシュボードから適切なタイプの広告を作成し、スロット ID をペース"
-"トしてください。広告を表示したくない場所がある場合、そのユニット ID の設定を"
-"空欄にしておいてください。推奨となっているユニットと違うタイプの広告を使用す"
-"ることも可能ですが、想定通り動かなくなる可能性があります。"
+"これらは AdSense の個々のユニット設定です。これらの広告を使うためには AdSense のダッシュボードから適切なタイ"
+"プの広告を作成し、スロット ID をペーストしてください。広告を表示したくない場所がある場合、そのユニット ID の"
+"設定を空欄にしておいてください。推奨となっているユニットと違うタイプの広告を使用することも可能ですが、想定通"
+"り動かなくなる可能性があります。"
 
 #: inc/customizer.php:254
 msgid "Single In-article Ad Slot 1"
@@ -200,23 +188,19 @@ msgstr "インフィード広告"
 
 #: inc/customizer.php:358
 msgid ""
-"In-feed ads are native-like ads which will be shown between articles on "
-"front and archive pages. To use this ad, create an in-feed ad from your "
-"AdSense dashboard and copy/paste slot ID and layout key."
+"In-feed ads are native-like ads which will be shown between articles on front and archive pages. To use "
+"this ad, create an in-feed ad from your AdSense dashboard and copy/paste slot ID and layout key."
 msgstr ""
-"インフィード広告はトップページとアーカイブページ上で、投稿と投稿の間に表示さ"
-"れるネイティブ広告です。この広告を使うには、AdSense のダッシュボードからイン"
-"フィード広告を作成し、スロット ID と layout key をここにペーストしてくださ"
-"い。"
+"インフィード広告はトップページとアーカイブページ上で、投稿と投稿の間に表示されるネイティブ広告です。この広告"
+"を使うには、AdSense のダッシュボードからインフィード広告を作成し、スロット ID と layout key をここにペースト"
+"してください。"
 
 #: inc/customizer.php:376
 msgid "In-feed Ad Layout"
 msgstr "インフィード広告レイアウト"
 
 #: inc/customizer.php:377
-msgid ""
-"If you want to customize the layout of ad layout, paste its ad-layout-key "
-"here."
+msgid "If you want to customize the layout of ad layout, paste its ad-layout-key here."
 msgstr "インフィード広告のレイアウトキーをここにペーストしてください。"
 
 #: inc/customizer.php:394
