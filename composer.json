@@ -1,4 +1,15 @@
 {
+  "name": "Coldbox Ads Extension",
+  "description": "Coldbox theme extension for Google AdSense.",
+  "authors": [
+    {
+      "name": "Toshihiro Kanai",
+      "email": "i@miruc.co",
+      "homepage": "https://miruc.co/",
+      "role": "Developer"
+    }
+  ],
+  "license": "GPL-2.0+",
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-cli/wp-cli": "*",
@@ -10,13 +21,12 @@
     "lint-fix": "vendor/bin/phpcbf coldbox-ads-extension.php inc/*.php"
   },
   "require": {
-    "php": ">=5.3.0",
+    "php": ">=5.6.0",
     "inc2734/wp-github-plugin-updater": "0.1.*"
   },
   "autoload": {
     "psr-4": {
       "updater\\": ""
     }
-  },
-  "license": "GPL-2.0+"
+  }
 }
