@@ -22,11 +22,11 @@ add_action(
 		 * Returns recommended unit label for customizer description.
 		 *
 		 * @since 1.0.0
-		 * @param boolean $br If it breaks line before or not.
+		 * @param boolean $br Whether or not to insert line break before the text.
 		 * @param string  $unit Unit name.
 		 * @return string
 		 */
-		function coldbox_ads_recommended_unit_label( $br = false, $unit ) {
+		function coldbox_ads_recommended_unit_label( $br, $unit ) {
 			if ( $br ) {
 				$br = '<br>';
 			} else {
