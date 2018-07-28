@@ -5,9 +5,31 @@
   "license": "GPL-2.0+",
   "scripts": {
     "pot": "node bin/wppot.js",
-    "build": "mkdir dist && cp -r inc dist && cp -r languages dist && cp -r readme.txt dist && cp -r coldbox-ads-extension.php dist"
+    "build": "mkdir dist && cp -r inc dist && cp -r languages dist && cp -r readme.txt dist && cp -r coldbox-ads-extension.php dist",
+    "wp:dev": "cross-env BABEL_ENV=default webpack --mode=development",
+    "wp:build": "cross-env BABEL_ENV=default webpack --mode=production",
+    "wp:watch": "cross-env BABEL_ENV=default webpack --mode=development --watch"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "prettier": "^1.13.7",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
     "wp-pot": "^1.6.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
