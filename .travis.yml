@@ -50,7 +50,7 @@ before_script:
     elif [[ ${TRAVIS_PHP_VERSION} == "5.6" ]]; then
       composer install --no-dev
     fi
-- nvm install 8
+- nvm install 10
 - npm install
 - |
   if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then

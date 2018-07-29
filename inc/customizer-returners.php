@@ -20,9 +20,11 @@ function coldbox_ads_is_ads_enabled() {
 
 	// Check if the ad has been disabled by meta box settings.
 	$meta = get_post_meta( get_the_ID(), 'coldbox_ads_metabox', true );
-	if ( $meta ) {
-		if ( in_array( 'disable_all_ads', $meta, true ) ) {
-			$switcher = false;
+	if ( is_single() || is_page() ) {
+		if ( $meta ) {
+			if ( in_array( 'disable_all_ads', $meta, true ) ) {
+				$switcher = false;
+			}
 		}
 	}
 
