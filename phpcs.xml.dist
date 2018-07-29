@@ -9,20 +9,8 @@
     <!-- Show progress and sniff codes in all reports -->
     <arg value="ps"/>
 
-	<rule ref="WordPress-Core" />
-	<rule ref="WordPress-Extra" />
-	<rule ref="WordPress-Docs" />
-	<rule ref="WordPress-VIP">
-		<!-- ...Except for VIP-specific things -->
-		<exclude name="WordPress.VIP.FileSystemWritesDisallow" />
-		<exclude name="WordPress.VIP.RestrictedFunctions" />
-		<exclude name="WordPress.VIP.RestrictedVariables" />
-		<exclude name="WordPress.VIP.SuperGlobalInputUsage" />
-		<exclude name="WordPress.VIP.ValidatedSanitizedInput" />
-		<exclude name="WordPress.VIP.DirectDatabaseQuery" />
-		<exclude name="WordPress.VIP.OrderByRand" />
-		<exclude name="WordPress.WhiteSpace.PrecisionAlignment" />
-		<!-- <exclude name="WordPress.XSS.EscapeOutput" /> -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.Security.ValidatedSanitizedInput" />
 	</rule>
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>

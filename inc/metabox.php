@@ -13,7 +13,12 @@
  */
 add_action(
 	'add_meta_boxes', function() {
-		add_meta_box( 'coldbox_ads_metabox', __( 'Coldbox Ads Extension: Ads Settings for This Post', 'coldbox-ads-extension' ), 'coldbox_ads_meta_box_callback', array( 'post', 'page' ) );
+		add_meta_box(
+			'coldbox_ads_metabox',
+			__( 'Coldbox Ads Extension: Ads Settings for This Post', 'coldbox-ads-extension' ),
+			'coldbox_ads_meta_box_callback',
+			array( 'post', 'page' )
+		);
 	}
 );
 
@@ -56,7 +61,7 @@ add_action(
 			return;
 		}
 		// Check if nonce is valid.
-		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['coldbox_ads_metabox_checkbox_nonce'] ) ), 'coldbox_ads_metabox_checkbox' ) ) {
+		if ( ! wp_verify_nonce( $_POST['coldbox_ads_metabox_checkbox_nonce'], 'coldbox_ads_metabox_checkbox' ) ) {
 			return;
 		}
 		// Check if not an autosave.
@@ -75,7 +80,7 @@ add_action(
 		}
 
 		$value = isset( $_POST['coldbox_ads_metabox'] ) && is_array( $_POST['coldbox_ads_metabox'] ) ?
-		sanitize_text_field( wp_unslash( $_POST['coldbox_ads_metabox'] ) ) : array();
+		$_POST['coldbox_ads_metabox'] : array();
 		if ( $value ) {
 			update_post_meta( $post_id, 'coldbox_ads_metabox', $value );
 		} else {
