@@ -45,9 +45,7 @@ before_script:
 - |
     if [[ ${TRAVIS_PHP_VERSION} == "7.2" ]]; then
       composer install
-    elif [[ ${TRAVIS_PHP_VERSION} == "7.*" ]]; then
-      composer install --no-dev
-    elif [[ ${TRAVIS_PHP_VERSION} == "5.6" ]]; then
+    else
       composer install --no-dev
     fi
 - nvm install 10
