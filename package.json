@@ -1,7 +1,7 @@
 {
   "name": "coldbox-ads-extension",
-  "version": "1.0.1",
-  "author": "Toshihiro Kanai (mirucon)",
+  "version": "1.0.2",
+  "author": "Toshihiro Kanai",
   "license": "GPL-2.0+",
   "scripts": {
     "pot": "node bin/wppot.js",
