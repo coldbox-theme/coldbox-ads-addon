@@ -21,7 +21,7 @@ function coldbox_ads_is_ads_enabled() {
 	// Check if the ad has been disabled by meta box settings.
 	$meta = get_post_meta( get_the_ID(), 'coldbox_ads_metabox', true );
 	if ( is_single() || is_page() ) {
-		if ( $meta ) {
+		if ( $meta && is_array( $meta ) ) {
 			if ( in_array( 'disable_all_ads', $meta, true ) ) {
 				$switcher = false;
 			}
@@ -78,7 +78,7 @@ function coldbox_ads_is_auto_ads_enabled() {
 	// Check if the ad has been disabled by meta box settings.
 	$meta = get_post_meta( get_the_ID(), 'coldbox_ads_metabox', true );
 	if ( is_single() || is_page() ) {
-		if ( $meta ) {
+		if ( $meta && is_array( $meta ) ) {
 			if ( in_array( 'disable_auto_ads', $meta, true ) ) {
 				$switcher = false;
 			}

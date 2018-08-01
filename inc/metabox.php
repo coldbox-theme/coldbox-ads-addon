@@ -48,8 +48,12 @@ function coldbox_ads_meta_box_callback() {
 	$name = 'coldbox_ads_metabox';
 	foreach ( $items as $item ) {
 		// phpcs:ignore
-		$checked = array_search( $item['value'], $post_meta ) !== false ?
-			'checked="checked"' : '';
+		if ( is_array( $post_meta ) ) {
+			$checked = array_search( $item['value'], $post_meta, true ) !== false ?
+				'checked="checked"' : '';
+		} else {
+			$checked = '';
+		}
 		echo "<p><label><input type=\"checkbox\" name=\"{$name}[]\" value=\"{$item['value']}\" $checked>{$item['text']}</label></p>"; // WPCS: XSS OK.
 	}
 }
