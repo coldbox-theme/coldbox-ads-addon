@@ -23,15 +23,15 @@ function coldbox_ads_languages() {
 add_action( 'plugins_loaded', 'coldbox_ads_languages' );
 
 // Load plugin files.
-require_once 'inc/ads-content.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/basic.php';
 
-require_once 'inc/customizer.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/customizer.php';
 
-require_once 'inc/customizer-returners.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/customizer-returners.php';
 
-require_once 'inc/metabox.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/metabox.php';
 
-require_once 'inc/amp-ads.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/amp-ads.php';
 
 // Load updater package if the PHP version is 5.6.0 or later.
 if ( version_compare( phpversion(), '5.6.0' ) >= 0 ) {
