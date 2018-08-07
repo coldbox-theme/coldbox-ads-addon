@@ -7,6 +7,40 @@
  */
 
 /**
+ * Enqueue AdSense script
+ */
+add_action(
+	'wp_enqueue_scripts', function() {
+		if (
+			coldbox_ads_is_ads_enabled() &&
+			coldbox_ads_matched_content_slot() ||
+			coldbox_ads_in_feed_slot() ||
+			coldbox_ads_single_mid1_slot() ||
+			coldbox_ads_single_mid2_slot() ||
+			coldbox_ads_single_bottom_desktop_slot() ||
+			coldbox_ads_single_bottom_mobile_slot() ||
+			coldbox_ads_archive_top_slot() ||
+			coldbox_ads_archive_bottom_desktop_slot() ||
+			coldbox_ads_archive_bottom_mobile_slot()
+		) {
+			wp_enqueue_script( 'adsbygoogle', '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', array(), '1.0.3', false );
+		}
+	}
+);
+
+/**
+ * Load AdSense script as `async`
+ */
+add_filter(
+	'script_loader_tag', function( $tag, $handle ) {
+		if ( 'adsbygoogle' === $handle ) {
+			return str_replace( ' src', ' async="async" src', $tag );
+		}
+		return $tag;
+	}, 10, 2
+);
+
+/**
  * Google AdSense Auto-Ads
  */
 add_action(
@@ -28,7 +62,6 @@ add_action(
 		}
 		// phpcs:disable
 		$ad = '
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({
 					google_ad_client: "' . coldbox_ads_pub_id() . '",
@@ -53,7 +86,7 @@ add_action(
 		}
 
 		// phpcs:ignore
-		$ad = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		$ad = '
 		<ins class="adsbygoogle"
 			 style="display:block"
 			 data-ad-format="autorelaxed"
@@ -106,7 +139,6 @@ add_action(
 			if ( wp_is_mobile() ) {
 				// phpcs:disable
 				$content = '
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<div style="width:100%" class="post">
 						<ins class="adsbygoogle"
 							style="display:block"
@@ -119,7 +151,6 @@ add_action(
 				';
 			} else {
 				$content = '
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<div style="width:100%" class="post">
 						<ins class="adsbygoogle"
 							 style="display:block"
@@ -154,7 +185,6 @@ add_action(
 		$ad =
 			coldbox_ads_label() . '
 			<div class="resp-unit">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<ins class="adsbygoogle"
 					 style="display:block; text-align:center;"
 					 data-ad-layout="in-article"
@@ -196,7 +226,6 @@ add_action(
 		// phpcs:disable
 		$ad = coldbox_ads_label() . '
 			<div class="resp-unit">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<ins class="adsbygoogle"
 					 style="display:block; text-align:center;"
 					 data-ad-layout="in-article"
@@ -241,7 +270,6 @@ add_action(
 				<div class="content-box">
 				' . coldbox_ads_label() . '
 					<div class="ad-single-bottom">
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 						<table class="ads-double">
 							<tr>
 								<td>
@@ -285,7 +313,6 @@ add_action(
 				<div class="content-box">
 				' . coldbox_ads_label() . '
 					<div class="ad-single-bottom"> 
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 						<div class="resp-unit"><ins class="adsbygoogle"
 						     style="display:block; text-align:center;"
 							 data-ad-format="auto"
@@ -322,7 +349,6 @@ add_action(
 			<div class="ad-archive-top">
 				' . coldbox_ads_label() . '
 				<div class="resp-unit">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
 				    <ins class="adsbygoogle"
 					     style="display:block"
 					     data-ad-client="' . coldbox_ads_pub_id() . '"
@@ -337,7 +363,6 @@ add_action(
 			<div class="ad-archive-top">
 				' . coldbox_ads_label() . '
 				<div class="resp-unit">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
 			    	<ins class="adsbygoogle"
 			    	style="display:block"
 			    	data-ad-client="' . coldbox_ads_pub_id() . '"
@@ -371,7 +396,6 @@ add_action(
 			$ad = '
 				<div class="ad-archive-bottom">'
 					. coldbox_ads_label() . '
-				    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<table class="ads-double">
 						<tr>
 							<td>
@@ -398,7 +422,6 @@ add_action(
 			$ad = '
 			<div class="ad-archive-bottom"> '
 			      . coldbox_ads_label() . '
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<div class="resp-unit">
 					<ins class="adsbygoogle"
 					     style="display:block; text-align:center;"
