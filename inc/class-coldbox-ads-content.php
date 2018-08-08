@@ -51,6 +51,7 @@ class Coldbox_Ads_Content {
 					data-ad-slot="' . coldbox_ads_matched_content_slot() . '">
 				</amp-ad>';
 		}
+		$ad = apply_filters( 'coldbox_ads_matched_content', $ad );
 		echo $ad; // WPCS: XSS OK.
 	}
 
@@ -72,8 +73,8 @@ class Coldbox_Ads_Content {
 						 data-ad-layout="in-article"
 						 data-ad-format="fluid"
 						 data-ad-client="' . coldbox_ads_pub_id() . '"
-						 data-ad-slot="' . coldbox_ads_single_mid1_slot() . '"></ins>
-					<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+						 data-ad-slot="' . coldbox_ads_single_mid1_slot() . '">
+					</ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 				</div>
 			';
 
@@ -85,9 +86,10 @@ class Coldbox_Ads_Content {
 					data-ad-slot="' . coldbox_ads_single_mid1_slot() . '"
 					data-auto-format="rspv"
 					data-full-width>
-			    <div overflow></div>
+			    	<div overflow></div>
 		        </amp-ad>';
 		}
+		$ad = apply_filters( 'coldbox_ads_in_article_one', $ad );
 		echo $ad; // WPCS: XSS OK.
 	}
 
@@ -109,8 +111,7 @@ class Coldbox_Ads_Content {
 					 data-ad-format="fluid"
 					 data-ad-client="' . coldbox_ads_pub_id() . '"
 					 data-ad-slot="' . coldbox_ads_single_mid2_slot() . '">
-				</ins>
-				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+				</ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 			</div>
 		';
 		if ( cd_is_amp() ) {
@@ -124,6 +125,7 @@ class Coldbox_Ads_Content {
 			        <div overflow></div>
 	  			</amp-ad>';
 		}
+		$ad = apply_filters( 'coldbox_ads_in_article_two', $ad );
 		echo $ad; // WPCS: XSS OK.
 	}
 
@@ -137,7 +139,6 @@ class Coldbox_Ads_Content {
 		}
 
 		if ( ! wp_is_mobile() && coldbox_ads_single_bottom_desktop_slot() ) {
-			// phpcs:disable
 			$ad = '
 				<div class="content-box">
 				' . coldbox_ads_label() . '
@@ -185,20 +186,22 @@ class Coldbox_Ads_Content {
 				<div class="content-box">
 				' . coldbox_ads_label() . '
 					<div class="ad-single-bottom"> 
-						<div class="resp-unit"><ins class="adsbygoogle"
-						     style="display:block; text-align:center;"
-							 data-ad-format="auto"
-							 data-ad-client="' . coldbox_ads_pub_id() . '"
-							 data-ad-slot="' . coldbox_ads_single_bottom_mobile_slot() . '"></ins></div>
-						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+						<div class="resp-unit">
+							<ins class="adsbygoogle"
+							     style="display:block; text-align:center;"
+								 data-ad-format="auto"
+								 data-ad-client="' . coldbox_ads_pub_id() . '"
+								 data-ad-slot="' . coldbox_ads_single_bottom_mobile_slot() . '">
+							</ins>
+						</div><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 					</div>
 				</div>
 			';
-			// phpcs:enable
 		} else {
 			$ad = false;
 		}
 		if ( $ad ) {
+			$ad = apply_filters( 'coldbox_ads_single_bottom', $ad );
 			echo $ad; // WPCS: XSS OK.
 		}
 	}
@@ -231,7 +234,7 @@ class Coldbox_Ads_Content {
 
 		if ( in_array( $count, $ads_array, true ) ) {
 			if ( wp_is_mobile() ) {
-				$content = '
+				$ad = '
 					<div style="width:100%" class="post">
 						<ins class="adsbygoogle"
 							style="display:block"
@@ -243,7 +246,7 @@ class Coldbox_Ads_Content {
 					</div>
 				';
 			} else {
-				$content = '
+				$ad = '
 					<div style="width:100%" class="post">
 						<ins class="adsbygoogle"
 							 style="display:block"
@@ -256,7 +259,9 @@ class Coldbox_Ads_Content {
 					</div>
 				';
 			}
-			echo '<article class="post-ad post">' . $content . '</article>'; // WPCS: XSS OK.
+			$ad = apply_filters( 'coldbox_ads_in_feed', $ad );
+			$ad = apply_filters( 'coldbox_ads_in_feed_' . $count, $ad );
+			echo '<article class="post-ad post">' . $ad . '</article>'; // WPCS: XSS OK.
 		}
 	}
 
@@ -298,6 +303,7 @@ class Coldbox_Ads_Content {
 			';
 			// phpcs:enable
 		}
+		$ad = apply_filters( 'coldbox_ads_archive_top', $ad );
 		echo $ad; // WPCS: XSS OK.
 	}
 
@@ -354,6 +360,7 @@ class Coldbox_Ads_Content {
 			$ad = false;
 		}
 		if ( $ad ) {
+			$ad = apply_filters( 'coldbox_ads_archive_bottom', $ad );
 			echo $ad; // WPCS: XSS OK.
 		}
 	}
