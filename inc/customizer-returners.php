@@ -28,11 +28,15 @@ function coldbox_ads_is_ads_enabled() {
 		}
 	}
 
+	$switcher = apply_filters( 'coldbox_ads_is_ads_enabled', $switcher );
+
 	return $switcher;
 }
 
 /**
- * Return Publisher's ID.
+ * Return whether the current page is AMP page or not.
+ *
+ * Always return `false` when the Coldbox Addons plugin is not activated or AMP feature is disabled. Otherwise return cd_is_amp().
  *
  * @return boolean
  */
@@ -49,7 +53,9 @@ function coldbox_ads_is_amp() {
  * @return string
  */
 function coldbox_ads_pub_id() {
-	return esc_html( get_theme_mod( 'ads_pub_id', '' ) );
+	$pub_id = esc_html( get_theme_mod( 'ads_pub_id', '' ) );
+	$pub_id = apply_filters( 'coldbox_ads_pub_id', $pub_id );
+	return $pub_id;
 }
 
 /**
@@ -64,6 +70,7 @@ function coldbox_ads_label() {
 	} else {
 		$label = '';
 	}
+	$label = apply_filters( 'coldbox_ads_label', $label );
 	return $label;
 }
 
@@ -84,7 +91,7 @@ function coldbox_ads_is_auto_ads_enabled() {
 			}
 		}
 	}
-
+	$switcher = apply_filters( 'coldbox_ads_is_auto_ads_enabled', $switcher );
 	return $switcher;
 }
 /**
@@ -93,31 +100,42 @@ function coldbox_ads_is_auto_ads_enabled() {
  * @return boolean
  */
 function coldbox_ads_auto_on_front_page() {
-	return get_theme_mod( 'ads_auto_on_front_page', true );
+	$val = get_theme_mod( 'ads_auto_on_front_page', true );
+	$val = apply_filters( 'coldbox_ads_auto_on_front_page', $val );
+	return $val;
 }
+
 /**
  * Return whether or not it uses auto-ads on archive pages.
  *
  * @return boolean
  */
 function coldbox_ads_auto_on_archive() {
-	return get_theme_mod( 'ads_auto_on_archive', true );
+	$val = get_theme_mod( 'ads_auto_on_archive', true );
+	$val = apply_filters( 'coldbox_ads_auto_on_archive', $val );
+	return $val;
 }
+
 /**
  * Return whether or not it uses auto-ads on single pages.
  *
  * @return boolean
  */
 function coldbox_ads_auto_on_single() {
-	return get_theme_mod( 'ads_auto_on_single', true );
+	$val = get_theme_mod( 'ads_auto_on_single', true );
+	$val = apply_filters( 'coldbox_ads_auto_on_single', $val );
+	return $val;
 }
+
 /**
  * Return whether or not it uses auto-ads on pages.
  *
  * @return boolean
  */
 function coldbox_ads_auto_on_pages() {
-	return get_theme_mod( 'ads_auto_on_pages', true );
+	$val = get_theme_mod( 'ads_auto_on_pages', true );
+	$val = apply_filters( 'coldbox_ads_auto_on_pages', $val );
+	return $val;
 }
 
 /**
@@ -126,7 +144,9 @@ function coldbox_ads_auto_on_pages() {
  * @return number
  */
 function coldbox_ads_matched_content_slot() {
-	return absint( get_theme_mod( 'ads_matched_content', '' ) );
+	$id = absint( get_theme_mod( 'ads_matched_content', '' ) );
+	$id = apply_filters( 'coldbox_ads_matched_content', $id );
+	return $id;
 }
 
 /**
@@ -135,23 +155,31 @@ function coldbox_ads_matched_content_slot() {
  * @return number
  */
 function coldbox_ads_in_feed_slot() {
-	return absint( get_theme_mod( 'ads_in_feed', '' ) );
+	$id = absint( get_theme_mod( 'ads_in_feed', '' ) );
+	$id = apply_filters( 'coldbox_ads_in_feed', $id );
+	return $id;
 }
+
 /**
- * Return the slot ID for in-feed ad.
+ * Return the layout key for in-feed ad.
  *
  * @return string
  */
 function coldbox_ads_in_feed_layout_key() {
-	return esc_html( get_theme_mod( 'ads_in_feed_layout', '' ) );
+	$key = esc_html( get_theme_mod( 'ads_in_feed_layout', '' ) );
+	$key = apply_filters( 'coldbox_ads_in_feed_layout', $key );
+	return $key;
 }
+
 /**
  * Return per how many articles to show in-feed ad.
  *
  * @return integer
  */
 function coldbox_ads_in_feed_num() {
-	return absint( get_theme_mod( 'ads_in_feed_num', 4 ) );
+	$num = absint( get_theme_mod( 'ads_in_feed_num', 4 ) );
+	$num = apply_filters( 'coldbox_ads_in_feed_num', $num );
+	return $num;
 }
 
 /**
@@ -160,7 +188,9 @@ function coldbox_ads_in_feed_num() {
  * @return number
  */
 function coldbox_ads_single_mid1_slot() {
-	return absint( get_theme_mod( 'ad_single_mid1', '' ) );
+	$id = absint( get_theme_mod( 'ads_single_mid1', '' ) );
+	$id = apply_filters( 'coldbox_ads_single_mid1', $id );
+	return $id;
 }
 /**
  * Return slot ID for single middle two.
@@ -168,7 +198,9 @@ function coldbox_ads_single_mid1_slot() {
  * @return number
  */
 function coldbox_ads_single_mid2_slot() {
-	return absint( get_theme_mod( 'ad_single_mid2', '' ) );
+	$id = absint( get_theme_mod( 'ad_single_mid2', '' ) );
+	$id = apply_filters( 'coldbox_ad_single_mid2', $id );
+	return $id;
 }
 
 /**
@@ -177,15 +209,20 @@ function coldbox_ads_single_mid2_slot() {
  * @return number
  */
 function coldbox_ads_single_bottom_desktop_slot() {
-	return absint( get_theme_mod( 'ad_single_bottom_desktop', '' ) );
+	$id = absint( get_theme_mod( 'ad_single_bottom_desktop', '' ) );
+	$id = apply_filters( 'coldbox_ad_single_bottom_desktop', $id );
+	return $id;
 }
+
 /**
  * Return slot ID for single bottom for mobile.
  *
  * @return number
  */
 function coldbox_ads_single_bottom_mobile_slot() {
-	return absint( get_theme_mod( 'ad_single_bottom_mobile', '' ) );
+	$id = absint( get_theme_mod( 'ad_single_bottom_mobile', '' ) );
+	$id = apply_filters( 'coldbox_ad_single_bottom_mobile', $id );
+	return $id;
 }
 
 /**
@@ -194,7 +231,9 @@ function coldbox_ads_single_bottom_mobile_slot() {
  * @return number
  */
 function coldbox_ads_archive_top_slot() {
-	return absint( get_theme_mod( 'ad_archive_top', '' ) );
+	$id = absint( get_theme_mod( 'ad_archive_top', '' ) );
+	$id = apply_filters( 'coldbox_ad_archive_top', $id );
+	return $id;
 }
 
 /**
@@ -203,14 +242,19 @@ function coldbox_ads_archive_top_slot() {
  * @return number
  */
 function coldbox_ads_archive_bottom_desktop_slot() {
-	return absint( get_theme_mod( 'ad_archive_bottom_desktop', '' ) );
+	$id = absint( get_theme_mod( 'ad_archive_bottom_desktop', '' ) );
+	$id = apply_filters( 'coldbox_ad_archive_bottom_desktop', $id );
+	return $id;
 }
+
 /**
  * Return slot ID for archive bottom for mobile.
  *
  * @return number
  */
 function coldbox_ads_archive_bottom_mobile_slot() {
-	return absint( get_theme_mod( 'ad_archive_bottom_mobile', '' ) );
+	$id = absint( get_theme_mod( 'ad_archive_bottom_mobile', '' ) );
+	$id = apply_filters( 'coldbox_ad_archive_bottom_mobile', $id );
+	return $id;
 }
 
