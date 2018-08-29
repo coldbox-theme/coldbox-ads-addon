@@ -7,7 +7,7 @@
  * Author URI:      https://miruc.co/
  * Text Domain:     coldbox-ads-extension
  * Domain Path:     /languages
- * Version:         1.0.2
+ * Version:         1.0.3
  *
  * @package         Coldbox_Ads_Extension
  */
