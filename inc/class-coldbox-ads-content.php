@@ -17,7 +17,7 @@ class Coldbox_Ads_Content {
 	public function __construct() {
 		add_action( 'cd_related_posts_bottom', array( $this, 'matched_content' ) );
 		add_action( 'cd_single_middle_of_content', array( $this, 'single_in_article_one' ) );
-		add_action( 'cd_single_middle_of_content', array( $this, 'single_in_article_two' ) );
+		add_action( 'cd_single_last_of_content', array( $this, 'single_in_article_two' ) );
 		add_action( 'cd_single_after', array( $this, 'single_bottom' ) );
 		add_action( 'cd_archive_midst_content', array( $this, 'in_feed' ) );
 		add_action( 'cd_archive_top', array( $this, 'archive_top' ) );
