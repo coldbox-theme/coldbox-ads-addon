@@ -173,6 +173,7 @@ add_action(
 			'ads_auto_on_archive', array(
 				'default'           => true,
 				'sanitize_callback' => 'wp_validate_boolean',
+				'validate_callback' => 'coldbox_ads_validate_bool',
 			)
 		);
 		$wp_customize->add_control(
@@ -190,6 +191,7 @@ add_action(
 			'ads_auto_on_single', array(
 				'default'           => true,
 				'sanitize_callback' => 'wp_validate_boolean',
+				'validate_callback' => 'coldbox_ads_validate_bool',
 			)
 		);
 		$wp_customize->add_control(
@@ -207,6 +209,7 @@ add_action(
 			'ads_auto_on_pages', array(
 				'default'           => true,
 				'sanitize_callback' => 'wp_validate_boolean',
+				'validate_callback' => 'coldbox_ads_validate_bool',
 			)
 		);
 		$wp_customize->add_control(
