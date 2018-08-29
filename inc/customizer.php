@@ -150,11 +150,12 @@ add_action(
 				)
 			)
 		);
-		// Selective auto-ads for the top page.
+		// Selective auto-ads for the front page.
 		$wp_customize->add_setting(
 			'ads_auto_on_front_page', array(
 				'default'           => true,
-				'sanitize_callback' => 'wp_validate_checkbox',
+				'sanitize_callback' => 'wp_validate_boolean',
+				'validate_callback' => 'coldbox_ads_validate_bool',
 			)
 		);
 		$wp_customize->add_control(
@@ -171,7 +172,7 @@ add_action(
 		$wp_customize->add_setting(
 			'ads_auto_on_archive', array(
 				'default'           => true,
-				'sanitize_callback' => 'wp_validate_checkbox',
+				'sanitize_callback' => 'wp_validate_boolean',
 			)
 		);
 		$wp_customize->add_control(
@@ -188,7 +189,7 @@ add_action(
 		$wp_customize->add_setting(
 			'ads_auto_on_single', array(
 				'default'           => true,
-				'sanitize_callback' => 'wp_validate_checkbox',
+				'sanitize_callback' => 'wp_validate_boolean',
 			)
 		);
 		$wp_customize->add_control(
@@ -205,7 +206,7 @@ add_action(
 		$wp_customize->add_setting(
 			'ads_auto_on_pages', array(
 				'default'           => true,
-				'sanitize_callback' => 'wp_validate_checkbox',
+				'sanitize_callback' => 'wp_validate_boolean',
 			)
 		);
 		$wp_customize->add_control(

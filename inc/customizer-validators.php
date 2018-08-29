@@ -9,7 +9,7 @@
 /**
  * Validator for Publisher ID.
  *
- * @param string $validity validity.
+ * @param mixed  $validity validity.
  * @param string $value value.
  *
  * @return mixed
@@ -31,7 +31,7 @@ function coldbox_ads_validate_pub_id( $validity, $value ) {
 /**
  * Validator for Ad Slot ID.
  *
- * @param string $validity validity.
+ * @param mixed  $validity validity.
  * @param string $value value.
  *
  * @return mixed
@@ -39,6 +39,22 @@ function coldbox_ads_validate_pub_id( $validity, $value ) {
 function coldbox_ads_validate_slot_id( $validity, $value ) {
 	if ( ! is_numeric( $value ) && ! empty( $value ) ) {
 		$validity->add( 'not_a_num', __( 'It should only contain numbers.', 'coldbox_ads_addon' ) );
+	}
+	return $validity;
+}
+
+
+/**
+ * Velidator for boolean value.
+ *
+ * @param mixed  $validity validity.
+ * @param string $value value.
+ *
+ * @return mixed
+ */
+function coldbox_ads_validate_bool( $validity, $value ) {
+	if ( ! is_bool( $value ) ) {
+		$validity->add( 'invalid_value', __( 'Invalid value.', 'coldbox_ads_addon' ) );
 	}
 	return $validity;
 }
