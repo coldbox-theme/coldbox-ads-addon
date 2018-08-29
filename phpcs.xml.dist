@@ -10,6 +10,7 @@
     <arg value="ps"/>
 
 	<rule ref="WordPress">
+		<exclude name="WordPress.Security.ValidatedSanitizedInput"/>
 	</rule>
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>

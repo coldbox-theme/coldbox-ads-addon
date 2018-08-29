@@ -74,5 +74,5 @@ add_action(
 	}
 );
 
-include_once plugin_dir_path( __FILE__ ) . 'class-coldbox-ads-content.php';
+require_once plugin_dir_path( __FILE__ ) . 'class-coldbox-ads-content.php';
 new Coldbox_Ads_Content();
