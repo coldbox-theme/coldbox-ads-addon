@@ -188,8 +188,8 @@ function coldbox_ads_in_feed_num() {
  * @return number
  */
 function coldbox_ads_single_mid1_slot() {
-	$id = absint( get_theme_mod( 'ads_single_mid1', '' ) );
-	$id = apply_filters( 'coldbox_ads_single_mid1', $id );
+	$id = absint( get_theme_mod( 'ad_single_mid1', '' ) );
+	$id = apply_filters( 'coldbox_ad_single_mid1', $id );
 	return $id;
 }
 /**
