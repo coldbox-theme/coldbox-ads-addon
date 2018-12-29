@@ -10,7 +10,8 @@
  * Enqueue AdSense script
  */
 add_action(
-	'wp_enqueue_scripts', function() {
+	'wp_enqueue_scripts',
+	function() {
 		if (
 			coldbox_ads_is_ads_enabled() &&
 			coldbox_ads_matched_content_slot() ||
@@ -32,19 +33,23 @@ add_action(
  * Load AdSense script as `async`
  */
 add_filter(
-	'script_loader_tag', function( $tag, $handle ) {
+	'script_loader_tag',
+	function( $tag, $handle ) {
 		if ( 'adsbygoogle' === $handle ) {
 			return str_replace( ' src', ' async="async" src', $tag );
 		}
 		return $tag;
-	}, 10, 2
+	},
+	10,
+	2
 );
 
 /**
  * Google AdSense Auto-Ads
  */
 add_action(
-	'wp_head', function() {
+	'wp_head',
+	function() {
 		if ( ! coldbox_ads_is_ads_enabled() || ! coldbox_ads_is_auto_ads_enabled() ) {
 			return;
 		}

@@ -7,7 +7,8 @@
  */
 
 add_action(
-	'wp', function() {
+	'wp',
+	function() {
 
 		if ( coldbox_ads_is_amp() ) {
 
@@ -24,7 +25,8 @@ add_action(
 			coldbox_ads_archive_bottom_mobile_slot()
 			) {
 				add_action(
-					'cd_addon_amp_head_action', function() {
+					'cd_addon_amp_head_action',
+					function() {
 					// phpcs:ignore
 					echo '<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>';
 					}
@@ -35,13 +37,15 @@ add_action(
 			coldbox_ads_is_auto_ads_enabled()
 			) {
 				add_action(
-					'cd_addon_amp_head_action', function() {
+					'cd_addon_amp_head_action',
+					function() {
 					// phpcs:ignore
 					echo '<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>';
 					}
 				);
 				add_action(
-					'cd_addon_amp_body_action', function() {
+					'cd_addon_amp_body_action',
+					function() {
 						echo '<amp-auto-ads type="adsense" data-ad-client="' . esc_attr( coldbox_ads_pub_id() ) . '"></amp-auto-ads>';
 					}
 				);

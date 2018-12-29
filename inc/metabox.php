@@ -12,7 +12,8 @@
  * @since 1.0.0
  */
 add_action(
-	'add_meta_boxes', function() {
+	'add_meta_boxes',
+	function() {
 		add_meta_box(
 			'coldbox_ads_metabox',
 			__( 'Coldbox Ads Extension: Ads Settings for This Post', 'coldbox-ads-extension' ),
@@ -59,7 +60,8 @@ function coldbox_ads_meta_box_callback() {
 }
 
 add_action(
-	'save_post', function ( $post_id ) {
+	'save_post',
+	function ( $post_id ) {
 		// Check if nonce is set.
 		if ( ! isset( $_POST['coldbox_ads_metabox_checkbox_nonce'] ) ) {
 			return;
