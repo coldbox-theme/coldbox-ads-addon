@@ -5,7 +5,7 @@ Tags: coldbox-theme
 Requires at least: 4.7
 Requires PHP: 5.3
 Tested up to: 4.9
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,10 @@ Coldbox theme extension for easy and high revenue Google AdSense. It supports re
 == Screenshots ==
 
 == Changelog ==
+
+= 1.0.4 =
+
+* fix: The slot of single middle 1 was not returning a valid value from customizer
 
 = 1.0.3 =
 
