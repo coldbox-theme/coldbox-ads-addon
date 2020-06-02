@@ -1,0 +1,196 @@
+# Copyright (C) 2019 Coldbox Ads Extension
+# This file is distributed under the same license as the Coldbox Ads Extension package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Coldbox Ads Extension\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Toshihiro Kanai (mirucon) <i@miruc.co>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../inc/customizer-validators.php:20
+msgid "You need to provide a valid publisher ID before using ads functions."
+msgstr ""
+
+#: ../inc/customizer-validators.php:22
+msgid "It's not a valid publisher ID, it should start with either \"ca-pub-\" or \"pub-\"."
+msgstr ""
+
+#: ../inc/customizer-validators.php:26
+msgid "It should only contain numbers after \"ca-pub-\" or \"pub-\"."
+msgstr ""
+
+#: ../inc/customizer.php:37
+msgid "Responsive"
+msgstr ""
+
+#: ../inc/customizer.php:39
+msgid "In-feed"
+msgstr ""
+
+#: ../inc/customizer.php:41
+msgid "Matched Content"
+msgstr ""
+
+#: ../inc/customizer.php:43
+msgid "In-article"
+msgstr ""
+
+#: ../inc/customizer.php:45
+msgid "Large Rectangle"
+msgstr ""
+
+#. translators: 1: Unit name.
+#: ../inc/customizer.php:48
+msgid "RECOMMENDED UNIT: %s."
+msgstr ""
+
+#: ../inc/customizer.php:55
+msgid "ADS EXTENSION: Google AdSense"
+msgstr ""
+
+#: ../inc/customizer.php:73
+msgid "Use Google AdSense"
+msgstr ""
+
+#: ../inc/customizer.php:95
+msgid "AdSense Publisher ID"
+msgstr ""
+
+#. translators: 1: opening a tag, 2: closing a tag.
+#: ../inc/customizer.php:98
+msgid "Publisher ID is the identifier of your AdSense account and its format is something like this: \"ca-pub-XXXXXXXXXXXXX\" (It may start with \"pub-\" for some users). %1$sGo here%2$s to learn how to find your publisher ID."
+msgstr ""
+
+#: ../inc/customizer.php:122
+msgid "Ad Label"
+msgstr ""
+
+#: ../inc/customizer.php:123
+msgid "This label will be shown before every single ad, except auto-ads, in-feed ads and matched content ads."
+msgstr ""
+
+#: ../inc/customizer.php:144
+msgid "Enable Auto Ads"
+msgstr ""
+
+#: ../inc/customizer.php:145
+msgid "Before using this, you need to enable and configure your auto-ads setting from your AdSense dashboard. Don't forget to enable AMP auto-ads as well, if you want it on AMP pages."
+msgstr ""
+
+#: ../inc/customizer.php:164
+msgid "Use auto ads on..."
+msgstr ""
+
+#: ../inc/customizer.php:184
+msgid "Front Page"
+msgstr ""
+
+#: ../inc/customizer.php:205
+msgid "Archive Pages"
+msgstr ""
+
+#: ../inc/customizer.php:226
+msgid "Single Pages"
+msgstr ""
+
+#: ../inc/customizer.php:247
+msgid "Pages"
+msgstr ""
+
+#: ../inc/customizer.php:267
+msgid "Ads Slot Settings"
+msgstr ""
+
+#: ../inc/customizer.php:268
+msgid ""
+"These are settings of AdSense ads. In order to use these ads, you should create a corresponding type of ad for the slot\n"
+"					(e.g. if it's matched content ad slot, you should have a matched content).\n"
+"					Then, copy and paste the slot ID to enable the ad slot. If you do not wish to show ad in certain place, then just keep it blank.  While it is possible to use different type of ad from the recommended one, I don't guarantee that will work and it might make your ads performance lower."
+msgstr ""
+
+#: ../inc/customizer.php:294
+msgid "Single In-article Ad Slot 1"
+msgstr ""
+
+#: ../inc/customizer.php:295
+msgid "This ad will be shown just before the second h2 heading in an article."
+msgstr ""
+
+#: ../inc/customizer.php:317
+msgid "Single In-article Ad Slot 2"
+msgstr ""
+
+#: ../inc/customizer.php:318
+msgid "This ad will be shown just before the last h2 heading in an article."
+msgstr ""
+
+#: ../inc/customizer.php:341
+msgid "Single Bottom Ad Slot for Desktop"
+msgstr ""
+
+#: ../inc/customizer.php:342
+msgid "This ad will be shown just after the content of an article."
+msgstr ""
+
+#: ../inc/customizer.php:364
+msgid "Single Bottom Ad Slot for Mobile"
+msgstr ""
+
+#: ../inc/customizer.php:387
+msgid "Matched Content Ad Slot"
+msgstr ""
+
+#: ../inc/customizer.php:388
+msgid "This will be shown just after your related posts."
+msgstr ""
+
+#: ../inc/customizer.php:413
+msgid "In-feed Ad Slot"
+msgstr ""
+
+#: ../inc/customizer.php:414
+msgid "In-feed ads are native-like ads which will be shown between articles on front and archive pages. To use this ad, create an in-feed ad from your AdSense dashboard and copy/paste slot ID and layout key."
+msgstr ""
+
+#: ../inc/customizer.php:435
+msgid "In-feed Ad Layout"
+msgstr ""
+
+#: ../inc/customizer.php:436
+msgid "If you want to customize the layout of ad layout, paste its ad-layout-key here."
+msgstr ""
+
+#: ../inc/customizer.php:456
+msgid "Show in-feed ads per X articles"
+msgstr ""
+
+#: ../inc/customizer.php:478
+msgid "Archive Top Ad Slot"
+msgstr ""
+
+#: ../inc/customizer.php:501
+msgid "Archive Bottom Ad Slot for Desktop"
+msgstr ""
+
+#: ../inc/customizer.php:524
+msgid "Archive Bottom Ad Slot for Mobile"
+msgstr ""
+
+#: ../inc/metabox.php:19
+msgid "Coldbox Ads Extension: Ads Settings for This Post"
+msgstr ""
+
+#: ../inc/metabox.php:40
+msgid "Do not show ads for this post"
+msgstr ""
+
+#: ../inc/metabox.php:44
+msgid "Do not use auto-ads for this post"
+msgstr ""
